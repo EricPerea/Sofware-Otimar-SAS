@@ -1,0 +1,172 @@
+/*Base de los estilos*/
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16;
+    line-height: 1.4em;
+    color: #222;
+    background: #efefef;
+    font-family: Helvetica;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Grilla*/
+.section {
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child{
+    margin-left: 0;
+}
+
+.span_3_of_3{
+    width: 100%;
+}
+
+.span_2_of_3{
+    width: 70.1%;
+}
+
+.span_1_of_3{
+    width: 32.2%;
+}
+
+/*Encabezado y Navegación*/
+header{
+    max-width: 100;
+    background: #FFFFFF;
+    padding: 20px;
+}
+
+nav{
+    width: 100%;
+    margin-bottom: 1rem;
+    background: #004D40;
+}
+
+.logo{
+    width: 175px;
+    font-display: block;
+    margin: auto;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    color: #efefef;
+    font-weight: 500;
+    text-align: center;
+    transition: max-height 0.5s;
+}
+
+.nav-item{
+    display: inline-block;
+    padding: 0px;
+    font-size: 1.5em;
+}
+
+.nav-item:hover{
+    background: #FFB74D;
+    cursor: pointer;
+}
+
+.menu-bar{
+    width: 100%;
+    box-sizing: border-box;
+    background: #009688;
+    text-align: left;
+    padding: 15px 20px;
+    color: #fdfdfd;
+    cursor: pointer;
+    
+}
+
+.hamburguer-icon{
+    float: right;
+    clear: both;
+    margin-top: -5px;
+    font-size: 1.4em;
+}
+
+/*footer*/
+
+footer{
+    width: 100%;
+    float: right;
+    background: #000000;
+    color:#FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+footer h1{
+    margin: 20px auto;
+}
+
+footer p{ 
+    margin: auto;
+}
+
+/* @480px */
+
+@media screen and (max-width: 30em){
+    nav ul{
+        max-height: 0;
+    }
+
+    .reveal{
+         max-height: 19em;
+    }
+
+    nav ul .nav-item{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .menu-bar{
+        display: block;
+    }
+}
+
+/* @380px */
+
+@media screen and (max-width: 23.75em){
+    .blog-content,
+    .post-link{
+        font-size: .9em;
+    }
+
+    .side-content{
+        font-size: .8em;
+    }
+
+    .submit{
+        padding: 10px 15px;
+    }
+
+    .nav-item{
+        font-size: 1.2em;
+    }
+}

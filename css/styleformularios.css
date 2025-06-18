@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container{  /*fondo del formulario */
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#F2A20C,#F2CF1D,#607D3D,#244F28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .form-content { /*cuadro del formulario */
+    width: 80vh;
+    max-width: 80%;
+    background-color: #FFFFFF;
+    padding: 50px, 60px, 70px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.logo{  /*acerca del logo */
+    width: 200px;
+    font-display: block;
+    margin: 20;
+    margin-top: 10%;
+}
+
+.form-content h1::after{ /*linea naranja */
+    content: " ";
+    width: 100%;
+    height: 8px;
+    border-radius: 1px;
+    background: #F2A20C;
+    box-shadow: -1px 4px 10px #7a5207;
+    position: absolute;
+    top: -20px; left: -5px;
+    bottom: 100px;
+}
+.form-content h1 {  /*titulo del formulario */
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #e1960b;
+    position: relative;
+    top: 40px; left: 5px;
+}
+
+.form-content h2 {  /*titulo 2 del formulario */
+    font-size: 18px;
+    margin-bottom: 30px;
+    color:#1d4121;
+    position: relative;
+    top: 0px; left: 5px;
+}
+
+
+.input-field { /*especifi de los inputs*/
+    margin: 15px 0;
+    border-radius: 4px;
+    display:block;
+    align-items: center;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+input{  /*color de los inputs*/
+    width: 80%;
+    background: transparent;
+    border-radius: 6px;
+    outline: none;
+    padding: 8px 15px;
+    border-color: rgba(0, 0, 0, 0.18);
+}
+
+input ::placeholder{ /*colorinputs la letra */
+    color: #171717;
+}
+ 
+.input-field{ /*color iconos*/
+    margin-left: 15px;
+    color:#244F28;
+}
+
+form p {  /* */
+    color: #171717;
+    text-align: left;
+    font-size: 12px;
+}
+
+form p a {  /* */
+    color: #1d4121;
+    margin-left: 5px;
+
+}
+
+.documento{
+    margin-left: 0px;
+    color:#244F28;
+    justify-content: left;
+}
+
+.error{
+    width: 200%;
+    text-align: center;
+    margin: auto;
+    color: #E65100;
+    padding-top: 20px;
+}
+
+.btn-field{ /* botones*/
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    /* justify-content: space-between; */
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.forgotpwd{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 13px;
+}
+
+.btn-field button { /* botones*/
+    flex-basis: 50%;
+    font-size: 15px;
+    background-color: #607D3D;
+    border: 2px solid #244F28;
+    box-shadow: -1px 3px 6px #1c3c1f;
+    color: #FFFFFF;
+    height: 35px;
+    border-radius: 10px;
+    /* border: 0; */
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+    margin: 15px 35px;
+
+}
+
+
+
+
+
+
