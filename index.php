@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -38,8 +42,15 @@
             <li class="nav-item"> <a href="#">Mis viajes</a></li>
             <li class="nav-item"> <a href="pages/indextarapaca.html">Blogs</a></li>
             <li class="nav-item"> <a href="pages/Bienvenida.html">Contacto</a></li>
-            <li class="nav-item"> <a href="pages/Formlogin.html">Ingresa</a></li>
+            <li class="nav-item"> <a href="pages/Formlogin.php">Ingresa</a></li>
             <li class="nav-item"> <a href="pages/Formularioinicio.php">Registrate</a></li>
+            <li class="nav-item"> <a href="pages/Formularioinicio.php">
+                    <?php if (isset($_SESSION['usuario'])): ?>
+                        Bienvenido, <?= htmlspecialchars($_SESSION['usuario']) ?> | <a href="php/logout.php">Cerrar sesión</a>
+                    <?php else: ?>
+                        <a href="pages/Formlogin.php">Iniciar sesión</a> | <a href="pages/Formularioinicio.php">Registrarse</a>
+                    <?php endif; ?>
+            </a></li>
         </ul>
 
     </nav>

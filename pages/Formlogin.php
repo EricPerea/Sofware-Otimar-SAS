@@ -24,32 +24,30 @@
             <h2 id="title">Ingrese usuario y contraseña</h2> <!-- Titulo formulario -->
             
             <!--action="validar.php" method="POST"-->
-            <form action="index.html" method="get" id="form">
+            <form action="../php/login.php" method="POST" id="form">
     
                 <div class="input-group">
                     
                     <!-- casilla usuario-->
-                    <div class="input-field" class="username" id="#usuarioDiv">
+                    <div class="input-field" class="username" id="usuario">
                         <i class="fa-solid fa-user"></i>
                         <label for="usuario"></label>
-                        <input type="usuario" id="usuario" placeholder="usuario">
+                        <input type="text" name="usuario" id="usuario" placeholder="usuario">
                     </div>
 
                     <!-- casilla Contraseña-->
                     <div class="input-field" class="username" id="#contraseñaDiv">
                         <i class="fa-solid fa-lock"></i>
                         <label for="contraseña"></label>
-                        <input type="contraseña"  id="contraseña" placeholder="contraseña">
+                        <input type="password" name="password" id="password" placeholder="Contraseña">
                     </div>
     
                 </div>
                 
                 <!-- botón iniciar sesión  href="index.html"-->
-                <a>
-                    <div class="btn-field">
-                        <button id="singUp" type="submit"  value="Inciar Sesion">Iniciar sesión</button>
-                    </div>
-                </a>
+                <div class="btn-field">
+                    <button id="singUp" type="submit"  name="login">Iniciar sesión</button>
+                </div>
                 <!-- preguntas finales -->
                 <div class="forgotpwd">
                     <label>¿Olvidaste tu contraseña?</label> <a href="#">Click aquí</a>
