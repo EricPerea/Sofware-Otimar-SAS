@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $fecha_nacimiento = $_POST['fecha_nacimiento'];
     $usuario = $_POST['usuario'];
-    $password = $_POST['contraseña'];
+    $password = $_POST['password'];
 
     // Encriptar la contraseña
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Insertar nuevo usuario
             $stmt = $pdo->prepare("INSERT INTO users (
                 nombre, tipo_documento, numero_doc, nacionalidad,
-                celular, email, fecha_nacimiento, usuario, contraseña
+                celular, email, fecha_nacimiento, usuario, password
             ) VALUES (
                 :nombre, :tipo_documento, :numero_doc, :nacionalidad,
                 :celular, :email, :fecha_nacimiento, :usuario, :password

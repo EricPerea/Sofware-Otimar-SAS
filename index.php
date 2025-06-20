@@ -36,24 +36,30 @@ session_start();
     </header>
 
     <nav>
-        <ul>
-            <li class="nav-item"> <a href="#">Inicio</a></li>
-            <li class="nav-item"> <a href="#">Reserva tu vuelo</a></li>
-            <li class="nav-item"> <a href="#">Mis viajes</a></li>
-            <li class="nav-item"> <a href="pages/indextarapaca.html">Blogs</a></li>
-            <li class="nav-item"> <a href="pages/Bienvenida.html">Contacto</a></li>
-            <li class="nav-item"> <a href="pages/Formlogin.php">Ingresa</a></li>
-            <li class="nav-item"> <a href="pages/Formularioinicio.php">Registrate</a></li>
-            <li class="nav-item"> <a href="pages/Formularioinicio.php">
-                    <?php if (isset($_SESSION['usuario'])): ?>
-                        Bienvenido, <?= htmlspecialchars($_SESSION['usuario']) ?> | <a href="php/logout.php">Cerrar sesión</a>
-                    <?php else: ?>
-                        <a href="pages/Formlogin.php">Iniciar sesión</a> | <a href="pages/Formularioinicio.php">Registrarse</a>
-                    <?php endif; ?>
-            </a></li>
-        </ul>
+    <div class="nav-wrapper teal darken-4">
+        <!-- PHP en lugar del logo -->
+        <a href="#" class="brand-logo right" style="padding-right: 20px; font-size: 15px;">
+        <?php if (isset($_SESSION['usuario'])): ?>
+            Bienvenido, <?= htmlspecialchars($_SESSION['usuario']) ?> </br>
+            <a href="php/logout.php" class="white-text" style="display: inline;">Cerrar sesión</a>
+        <?php else: ?>
+            <a href="pages/Formlogin.php" class="white-text" style="display: inline;">Iniciar sesión</a> 
+            <a href="pages/Formularioinicio.php" class="white-text" style="display: inline;">Registrarse</a>
+        <?php endif; ?>
+        </a>
 
+        <!-- Menú de navegación a la izquierda -->
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Reserva tu vuelo</a></li>
+        <li><a href="#">Mis viajes</a></li>
+        <li><a href="pages/indextarapaca.html">Blogs</a></li>
+        <li><a href="pages/Bienvenida.html">Contacto</a></li>
+        </ul>
+    </div>
     </nav>
+
+
 
     <!--Vuelos a Tarapacá,Reserva tu vuelo-->
     <div class="col s12 z-depth-2">

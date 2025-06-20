@@ -15,14 +15,18 @@
             <h2 id="title">Formulario de Registro</h2>
 
             <form action="../php/registro.php" method="POST" id="form">
+
                 <div class="input-group">
+
                     <!-- Nombre completo -->
+
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" name="nombre" placeholder="Nombre completo" required>
                     </div>
 
                     <!-- Tipo documento -->
+
                     <div class="input-field">
                         <i class="fa-solid fa-id-card"></i>
                         <label for="tipo_documento">Tipo documento:</label>
@@ -74,7 +78,7 @@
                     <!-- Contraseña -->
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="contraseña" placeholder="Contraseña" required>
+                        <input type="password" name="password" placeholder="Contraseña" required>
                     </div>
                 </div>
 
@@ -84,12 +88,13 @@
                 <div class="align-center">
                     <?php
                     if (isset($_GET['mensaje'])) {
-                        echo "<p style='color: green; font-weight: bold;'>" . htmlspecialchars($_GET['mensaje']) . "</p>";
+                        echo "<p style='color: green; font-weight: bold; text-align:center;'>" . htmlspecialchars($_GET['mensaje']) . "</p>";
                     }
                     ?>
                 </div>
                 <div class="forgotpwd">
-                    <label>¿Olvidaste tu contraseña?</label> <a href="#">Click aquí</a>
+                    <label>¿Olvidaste tu contraseña?</label> </br> <a href="#">Click aquí</a> </br>
+                    <label>¿Ya tienes una cuenta?</label> </br> <a href="Formlogin.php"> Inicia Sesión </a>
                 </div>
             </form>
         </div>
